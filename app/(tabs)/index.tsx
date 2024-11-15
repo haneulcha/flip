@@ -5,6 +5,7 @@ import {
   ScrollView,
   View,
   useWindowDimensions,
+  FlatList,
 } from "react-native";
 
 import { HelloWave } from "@/components/HelloWave";
@@ -13,8 +14,9 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import HomeHeader from "@/features/shared/components/HomeHeader";
 import Card from "@/features/shared/components/Card";
-import { recommended, series } from "@/features/shared/mock";
+import { bodyParts, recommended, series } from "@/features/shared/mock";
 import { SeriesCard } from "@/features/shared/components/SeriesCard";
+import { FlatCard } from "@/features/shared/components/FlatCard";
 
 export default function HomeScreen() {
   return (
@@ -28,6 +30,24 @@ export default function HomeScreen() {
         {recommended.map((item) => (
           <Card key={item.text.main} text={item.text} image={item.image} />
         ))}
+      </ScrollView>
+
+      <ScrollView
+        horizontal
+        contentContainerStyle={styles.gridContentContainer}
+      >
+        <FlatList
+          data={bodyParts}
+          numColumns={Math.ceil(bodyParts.length / 2)}
+          keyExtractor={(item) => item.id.toString()}
+          scrollEnabled={false}
+          style={styles.gridContainer}
+          contentContainerStyle={styles.gridContentContainer}
+          columnWrapperStyle={styles.gridColumn}
+          renderItem={({ item }) => (
+            <FlatCard key={item.id} image={item.image} text={item.name} />
+          )}
+        />
       </ScrollView>
 
       <ScrollView
@@ -95,6 +115,16 @@ const styles = StyleSheet.create({
   },
   scrollViewContentContainer: {
     gap: 24,
+  },
+  gridContainer: {
+    paddingHorizontal: 16,
+  },
+  gridContentContainer: {
+    alignSelf: "flex-start",
+    gap: 12,
+  },
+  gridColumn: {
+    gap: 8,
   },
   titleContainer: {
     flexDirection: "row",

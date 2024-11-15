@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  // re: circle image
   imageWrapper: {
     width: "22.5%",
     aspectRatio: 1,
     backgroundColor: "#ABC8C7",
     borderRadius: "100%",
-    borderColor: "red",
-    borderWidth: 1,
+    overflow: "hidden",
   },
   image: {
     width: "100%",

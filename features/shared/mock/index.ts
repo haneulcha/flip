@@ -98,3 +98,71 @@ export const series = [
     ],
   },
 ];
+
+export const bodyParts = [
+  {
+    id: 1,
+    name: "목",
+    image: require("@/assets/images/pose01.png"),
+  },
+  {
+    id: 2,
+    name: "어깨",
+    image: require("@/assets/images/pose02.png"),
+  },
+  {
+    id: 3,
+    name: "허리",
+    image: require("@/assets/images/pose03.png"),
+  },
+  {
+    id: 4,
+    name: "고관절",
+    image: require("@/assets/images/pose04.png"),
+  },
+  {
+    id: 5,
+    name: "무릎",
+    image: require("@/assets/images/pose05.png"),
+  },
+  {
+    id: 6,
+    name: "햄스트링",
+    image: require("@/assets/images/pose06.png"),
+  },
+  {
+    id: 7,
+    name: "손목",
+    image: require("@/assets/images/pose07.png"),
+  },
+  {
+    id: 8,
+    name: "등",
+    image: require("@/assets/images/pose08.png"),
+  },
+  {
+    id: 9,
+    name: "하체",
+    image: require("@/assets/images/pose09.png"),
+  },
+  {
+    id: 10,
+    name: "대퇴사두근",
+    image: require("@/assets/images/pose10.png"),
+  },
+  {
+    id: 11,
+    name: "팔",
+    image: require("@/assets/images/pose11.png"),
+  },
+  {
+    id: 12,
+    name: "코어",
+    image: require("@/assets/images/pose12.png"),
+  },
+  {
+    id: 13,
+    name: "전신",
+    image: require("@/assets/images/pose13.png"),
+  },
+];
