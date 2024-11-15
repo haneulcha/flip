@@ -19,29 +19,19 @@ export default function Card({ text, image }: CardProps) {
   const { width } = useWindowDimensions();
 
   return (
-    <View style={[styles.wrapper, { width: width * 0.8 }]}>
-      <View style={styles.container}>
-        <ThemedText type="default16" color="gray500" style={styles.subText}>
-          {text.sub}
-        </ThemedText>
-        <ThemedText type="default32">{text.main}</ThemedText>
-        <View style={styles.imageContainer}>
-          <Image source={image} style={styles.image} />
-        </View>
+    <View style={[styles.container, { width: width * 0.8 }]}>
+      <ThemedText type="default16" color="gray500" style={styles.subText}>
+        {text.sub}
+      </ThemedText>
+      <ThemedText type="default32">{text.main}</ThemedText>
+      <View style={styles.imageContainer}>
+        <Image source={image} style={styles.image} />
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    borderColor: "red",
-    borderWidth: 1,
-    flex: 1,
-    width: "100%",
-    overflow: "hidden",
-    padding: 16,
-  },
   container: {
     padding: 24,
     borderRadius: 48,

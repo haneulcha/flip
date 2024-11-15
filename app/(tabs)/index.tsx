@@ -20,7 +20,11 @@ export default function HomeScreen() {
   return (
     <ScrollView style={styles.container}>
       <HomeHeader />
-      <ScrollView horizontal>
+      <ScrollView
+        horizontal
+        style={styles.scrollViewContainer}
+        contentContainerStyle={styles.scrollViewContentContainer}
+      >
         {recommended.map((item) => (
           <Card key={item.text.main} text={item.text} image={item.image} />
         ))}
