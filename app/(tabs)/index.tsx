@@ -13,7 +13,8 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import HomeHeader from "@/features/shared/components/HomeHeader";
 import Card from "@/features/shared/components/Card";
-import { recommended } from "@/features/shared/mock";
+import { recommended, series } from "@/features/shared/mock";
+import { SeriesCard } from "@/features/shared/components/SeriesCard";
 
 export default function HomeScreen() {
   return (
@@ -22,6 +23,16 @@ export default function HomeScreen() {
       <ScrollView horizontal>
         {recommended.map((item) => (
           <Card key={item.text.main} text={item.text} image={item.image} />
+        ))}
+      </ScrollView>
+
+      <ScrollView
+        horizontal
+        style={styles.scrollViewContainer}
+        contentContainerStyle={styles.scrollViewContentContainer}
+      >
+        {series.map((item) => (
+          <SeriesCard key={item.id} text={item.text} images={item.images} />
         ))}
       </ScrollView>
 
@@ -75,7 +86,12 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
   },
-
+  scrollViewContainer: {
+    padding: 24,
+  },
+  scrollViewContentContainer: {
+    gap: 24,
+  },
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
