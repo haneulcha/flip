@@ -36,6 +36,96 @@ export const recommended = [
   },
 ];
 
+export const recommendSingleThemes = [
+  {
+    text: {
+      main: "목 1",
+      sub: "8분",
+    },
+    image: require("@/assets/images/pose01.png"),
+  },
+  {
+    text: {
+      main: "어깨 2",
+      sub: "12분",
+    },
+    image: require("@/assets/images/pose02.png"),
+  },
+  {
+    text: {
+      main: "허리 1",
+      sub: "15분",
+    },
+    image: require("@/assets/images/pose03.png"),
+  },
+  {
+    text: {
+      main: "골반 1",
+      sub: "10분",
+    },
+    image: require("@/assets/images/pose04.png"),
+  },
+  {
+    text: {
+      main: "무릎 2",
+      sub: "8분",
+    },
+    image: require("@/assets/images/pose05.png"),
+  },
+  {
+    text: {
+      main: "발목 3",
+      sub: "6분",
+    },
+    image: require("@/assets/images/pose06.png"),
+  },
+];
+
+export const singleThemes = [
+  {
+    text: {
+      main: "전신 스트레칭",
+      sub: "10분",
+    },
+    image: require("@/assets/images/pose01.png"),
+  },
+  {
+    text: {
+      main: "하체 강화",
+      sub: "15분",
+    },
+    image: require("@/assets/images/pose02.png"),
+  },
+  {
+    text: {
+      main: "상체 이완",
+      sub: "12분",
+    },
+    image: require("@/assets/images/pose03.png"),
+  },
+  {
+    text: {
+      main: "코어 운동",
+      sub: "8분",
+    },
+    image: require("@/assets/images/pose04.png"),
+  },
+  {
+    text: {
+      main: "밸런스 훈련",
+      sub: "20분",
+    },
+    image: require("@/assets/images/pose05.png"),
+  },
+  {
+    text: {
+      main: "근력 운동",
+      sub: "18분",
+    },
+    image: require("@/assets/images/pose06.png"),
+  },
+];
+
 export const series = [
   {
     id: 1,

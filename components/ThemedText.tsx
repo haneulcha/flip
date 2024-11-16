@@ -15,6 +15,7 @@ export type ThemedTextProps = TextProps & {
     | "link"
     | "default12"
     | "default16"
+    | "default20"
     | "default24"
     | "default32"
     | "heading24";
@@ -48,6 +49,7 @@ export function ThemedText({
         type === "heading24" ? styles.heading24 : undefined,
         type === "default12" ? styles.default12 : undefined,
         type === "default16" ? styles.default16 : undefined,
+        type === "default20" ? styles.default20 : undefined,
         type === "default24" ? styles.default24 : undefined,
         type === "default32" ? styles.default32 : undefined,
         style,
@@ -87,6 +89,10 @@ const styles = StyleSheet.create({
   },
   default12: {
     fontSize: 12,
+    fontWeight: "400",
+  },
+  default20: {
+    fontSize: 20,
     fontWeight: "400",
   },
   default24: {
