@@ -24,7 +24,6 @@ export default function HomeScreen() {
       <HomeHeader />
       <ScrollView
         horizontal
-        style={styles.scrollViewContainer}
         contentContainerStyle={styles.scrollViewContentContainer}
       >
         {recommended.map((item) => (
@@ -52,7 +51,6 @@ export default function HomeScreen() {
 
       <ScrollView
         horizontal
-        style={styles.scrollViewContainer}
         contentContainerStyle={styles.scrollViewContentContainer}
       >
         {series.map((item) => (
@@ -110,11 +108,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
   },
-  scrollViewContainer: {
-    padding: 24,
-  },
+
   scrollViewContentContainer: {
     gap: 24,
+    paddingVertical: 24,
+    paddingHorizontal: 16,
   },
   gridContainer: {
     paddingHorizontal: 16,

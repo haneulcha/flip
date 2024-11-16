@@ -22,26 +22,27 @@ export const FlatCard = ({ image, text }: FlatCardProps) => {
       style={[
         styles.container,
         {
-          width: width * 0.3,
-          borderColor: theme ? Colors[theme].gray300 : "transparent",
+          width: width * 0.35,
+          borderColor: theme ? Colors[theme].gray200 : "transparent",
         },
       ]}
     >
       <View style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
       </View>
-      <ThemedText type="default16">{text}</ThemedText>
+      <ThemedText type="default12">{text}</ThemedText>
     </View>
   );
 };
 
+// theme을 가져올 수는 없나?
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    aspectRatio: 1.4,
-    gap: 4,
-    padding: 8,
+    aspectRatio: 1.5,
+    gap: 8,
+    padding: 5,
     backgroundColor: "#fff",
     borderRadius: 8,
     borderWidth: 1.5,

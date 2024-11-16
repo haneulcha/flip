@@ -20,10 +20,12 @@ export default function Card({ text, image }: CardProps) {
 
   return (
     <View style={[styles.container, { width: width * 0.8 }]}>
-      <ThemedText type="default16" color="gray500" style={styles.subText}>
-        {text.sub}
-      </ThemedText>
-      <ThemedText type="default32">{text.main}</ThemedText>
+      <View style={styles.textContainer}>
+        <ThemedText type="default16" color="gray500">
+          {text.sub}
+        </ThemedText>
+        <ThemedText type="default32">{text.main}</ThemedText>
+      </View>
       <View style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
       </View>
@@ -33,25 +35,28 @@ export default function Card({ text, image }: CardProps) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    justifyContent: "space-between",
     padding: 24,
     borderRadius: 48,
     backgroundColor: "#fff",
+    // shadowColor: "#000",
+    // shadowOffset: { width: 2, height: 2 },
+    // shadowOpacity: 0.2,
+    // shadowRadius: 4,
     boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.2)",
     overflow: "hidden",
     width: "100%",
     aspectRatio: 1,
   },
-  subText: {
-    marginBottom: 4,
+  textContainer: {
+    gap: 4,
   },
   imageContainer: {
-    borderColor: "red",
-    borderWidth: 1,
     width: "100%",
-    marginTop: 16,
-    height: "68%",
-    borderBottomRightRadius: 36,
-    borderBottomLeftRadius: 36,
+    height: "66%",
+    borderBottomRightRadius: 32,
+    borderBottomLeftRadius: 32,
     overflow: "hidden",
   },
   image: {

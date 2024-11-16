@@ -36,14 +36,15 @@ export const SeriesCard = ({ text, images }: SeriesCardProps) => {
         </View>
       </View>
       <View style={styles.textContainer}>
-        <ThemedText type="default32">{text.main}</ThemedText>
-        <ThemedText type="default16" color="gray500">
+        <ThemedText type="default24">{text.main}</ThemedText>
+        <ThemedText type="default12" color="gray500">
           {text.sub}
         </ThemedText>
       </View>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
     padding: 32,
     borderRadius: 36,
     backgroundColor: "#fff",
+    // re: shadow
     boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.2)",
   },
   imageContainer: {
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   textContainer: {
-    marginTop: 8,
+    marginTop: 12,
     alignItems: "center",
     gap: 4,
   },

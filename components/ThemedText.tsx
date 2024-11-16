@@ -13,10 +13,11 @@ export type ThemedTextProps = TextProps & {
     | "defaultSemiBold"
     | "subtitle"
     | "link"
+    | "default12"
     | "default16"
     | "default24"
-    | "heading24"
-    | "default32";
+    | "default32"
+    | "heading24";
 };
 
 export function ThemedText({
@@ -45,6 +46,7 @@ export function ThemedText({
         type === "subtitle" ? styles.subtitle : undefined,
         type === "link" ? styles.link : undefined,
         type === "heading24" ? styles.heading24 : undefined,
+        type === "default12" ? styles.default12 : undefined,
         type === "default16" ? styles.default16 : undefined,
         type === "default24" ? styles.default24 : undefined,
         type === "default32" ? styles.default32 : undefined,
@@ -81,6 +83,10 @@ const styles = StyleSheet.create({
   },
   default16: {
     fontSize: 16,
+    fontWeight: "400",
+  },
+  default12: {
+    fontSize: 12,
     fontWeight: "400",
   },
   default24: {
