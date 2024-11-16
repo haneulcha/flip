@@ -1,4 +1,5 @@
 import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 import {
   Image,
   StyleSheet,
@@ -19,7 +20,7 @@ export default function Card({ text, image }: CardProps) {
   const { width } = useWindowDimensions();
 
   return (
-    <View style={[styles.container, { width: width * 0.8 }]}>
+    <ThemedView style={[styles.container, { width: width * 0.8 }]}>
       <View style={styles.textContainer}>
         <ThemedText type="default16" color="gray500">
           {text.sub}
@@ -29,7 +30,7 @@ export default function Card({ text, image }: CardProps) {
       <View style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
       </View>
-    </View>
+    </ThemedView>
   );
 }
 
@@ -39,7 +40,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 24,
     borderRadius: 48,
-    backgroundColor: "#fff",
     // shadowColor: "#000",
     // shadowOffset: { width: 2, height: 2 },
     // shadowOpacity: 0.2,

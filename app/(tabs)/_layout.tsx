@@ -7,7 +7,6 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
-import HomeHeader from "@/features/shared/HomeHeader";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -16,8 +15,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        headerShown: true,
-        headerTitle: "Flip",
+        headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
@@ -36,6 +34,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
           ),
+          sceneStyle: { backgroundColor: "#fff" }, // 홈 화면 배경색 설정
         }}
       />
       <Tabs.Screen

@@ -1,4 +1,5 @@
 import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 import {
   type ImageSourcePropType,
   View,
@@ -18,7 +19,7 @@ type SeriesCardProps = {
 export const SeriesCard = ({ text, images }: SeriesCardProps) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width: width * 0.65 }]}>
+    <ThemedView style={[styles.container, { width: width * 0.65 }]}>
       <View style={styles.imageContainer}>
         <View style={styles.imageWrapper}>
           <Image source={images[0]} style={styles.image} />
@@ -41,7 +42,7 @@ export const SeriesCard = ({ text, images }: SeriesCardProps) => {
           {text.sub}
         </ThemedText>
       </View>
-    </View>
+    </ThemedView>
   );
 };
 
@@ -51,7 +52,6 @@ const styles = StyleSheet.create({
     aspectRatio: 1.35,
     padding: 32,
     borderRadius: 36,
-    backgroundColor: "#fff",
     // re: shadow
     boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.2)",
   },

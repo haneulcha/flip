@@ -1,4 +1,5 @@
 import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 import { Colors } from "@/constants/Colors";
 import {
   View,
@@ -18,7 +19,7 @@ export const FlatCard = ({ image, text }: FlatCardProps) => {
   const { width } = useWindowDimensions();
   const theme = useColorScheme();
   return (
-    <View
+    <ThemedView
       style={[
         styles.container,
         {
@@ -31,7 +32,7 @@ export const FlatCard = ({ image, text }: FlatCardProps) => {
         <Image source={image} style={styles.image} />
       </View>
       <ThemedText type="default12">{text}</ThemedText>
-    </View>
+    </ThemedView>
   );
 };
 
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
     aspectRatio: 1.5,
     gap: 8,
     padding: 5,
-    backgroundColor: "#fff",
     borderRadius: 8,
     borderWidth: 1.5,
   },
