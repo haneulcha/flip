@@ -5,7 +5,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Colors } from "@/constants/Colors";
 
 export default function HomeHeader() {
-  const theme = useColorScheme();
+  const theme = useColorScheme() ?? "light";
   const today = new Date();
 
   const date = today.toLocaleDateString("ko-KR", {
@@ -15,12 +15,14 @@ export default function HomeHeader() {
   const day = today.toLocaleDateString("ko-KR", { weekday: "long" });
 
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView
+      style={[styles.container, { borderColor: Colors[theme].gray200 }]}
+    >
       <ThemedView style={styles.dateContainer}>
         <ThemedText type="default16" color="gray500">
           {date}
         </ThemedText>
-        <ThemedText type="heading24">{day}</ThemedText>
+        <ThemedText type="heading32">{day}</ThemedText>
       </ThemedView>
       <ThemedView>
         <IconSymbol
@@ -39,8 +41,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    borderBottomWidth: 0.5,
   },
   dateContainer: {
-    gap: 4,
+    gap: 8,
   },
 });

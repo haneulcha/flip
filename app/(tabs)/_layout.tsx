@@ -34,7 +34,9 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
           ),
-          sceneStyle: { backgroundColor: "#fff" }, // 홈 화면 배경색 설정
+          sceneStyle: {
+            backgroundColor: Colors[colorScheme ?? "light"].background,
+          }, // 홈 화면 배경색 설정
         }}
       />
       <Tabs.Screen

@@ -18,7 +18,9 @@ export type ThemedTextProps = TextProps & {
     | "default20"
     | "default24"
     | "default32"
-    | "heading24";
+    | "heading16"
+    | "heading24"
+    | "heading32";
 };
 
 export function ThemedText({
@@ -47,9 +49,11 @@ export function ThemedText({
         type === "subtitle" ? styles.subtitle : undefined,
         type === "link" ? styles.link : undefined,
         type === "heading24" ? styles.heading24 : undefined,
+        type === "heading32" ? styles.heading32 : undefined,
         type === "default12" ? styles.default12 : undefined,
         type === "default16" ? styles.default16 : undefined,
         type === "default20" ? styles.default20 : undefined,
+        type === "heading16" ? styles.heading16 : undefined,
         type === "default24" ? styles.default24 : undefined,
         type === "default32" ? styles.default32 : undefined,
         style,
@@ -78,10 +82,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
   },
+  heading16: {
+    fontSize: 16,
+    fontWeight: "bold",
+    lineHeight: 24,
+  },
   heading24: {
     fontSize: 24,
     fontWeight: "bold",
     lineHeight: 30,
+  },
+  heading32: {
+    fontSize: 32,
+    fontWeight: "bold",
   },
   default16: {
     fontSize: 16,
